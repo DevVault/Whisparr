@@ -1,13 +1,12 @@
 using System;
 using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Tv;
 
 namespace Whisparr.Api.V3.ImportLists
 {
     public class ImportListResource : ProviderResource<ImportListResource>
     {
         public bool EnableAutomaticAdd { get; set; }
-        public MonitorTypes ShouldMonitor { get; set; }
+        public ImportListMonitorType ShouldMonitor { get; set; }
         public string RootFolderPath { get; set; }
         public int QualityProfileId { get; set; }
         public ImportListType ListType { get; set; }

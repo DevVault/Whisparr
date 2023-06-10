@@ -22,6 +22,12 @@ import styles from './EditImportListModalContent.css';
 
 function EditImportListModalContent(props) {
 
+  const monitorOptions = [
+    { key: 'none', value: 'None' },
+    { key: 'specificEpisode', value: 'Specific Episode' },
+    { key: 'entireSite', value: 'All Site Episodes' }
+  ];
+
   const {
     advancedSettings,
     isFetching,
@@ -122,8 +128,9 @@ function EditImportListModalContent(props) {
                 </FormLabel>
 
                 <FormInputGroup
-                  type={inputTypes.MONITOR_EPISODES_SELECT}
+                  type={inputTypes.SELECT}
                   name="shouldMonitor"
+                  values={monitorOptions}
                   onChange={onInputChange}
                   {...shouldMonitor}
                 />
